@@ -1,5 +1,5 @@
 {% set name = "napari-segment" %}
-{% set version = "0.2.7" %}
+{% set version = "0.3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari_segment-{{ version }}.tar.gz
-  sha256: 8d99e78201fba9102897f0fc56a48d97975586b01189c6c258c863b5b4af6257
+  sha256: 4f3eec7df530544d2bb50ee5805c3c9d072ad2ec09b116c05dbcc5f0f281246d
 
 build:
   noarch: python
