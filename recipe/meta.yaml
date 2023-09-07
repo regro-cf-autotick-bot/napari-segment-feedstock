@@ -18,6 +18,7 @@ requirements:
   host:
     - pip
     - python >=3.8
+    - setuptools-scm
   run:
     - dask-core
     - imageio-ffmpeg
@@ -27,6 +28,7 @@ requirements:
     - nd2
     - numpy
     - pandas
+    # - pytest-qt  # Not needed
     - python >=3.8
     - pyyaml
     - qtpy
