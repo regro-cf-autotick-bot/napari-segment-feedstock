@@ -6,18 +6,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari_segment-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/napari_segment-{{ version }}.tar.gz
   sha256: de092bab18df1980a39fb13dcd4712d9a4c377822cd02d3e62c8023d411ada05
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools-scm
   run:
     - dask-core
@@ -29,7 +29,7 @@ requirements:
     - numpy
     - pandas
     # - pytest-qt  # Not needed
-    - python >=3.8
+    - python >={{ python_min }}
     - pyyaml
     - qtpy
     - scikit-image
@@ -46,6 +46,7 @@ test:
   requires:
     - pip
     - pyqt
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/napari-segment/
